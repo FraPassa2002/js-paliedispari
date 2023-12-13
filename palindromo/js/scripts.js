@@ -9,38 +9,32 @@
 */
 
 
-/*
-
-    anna -> a n n a -> anna
-    radar -> r a d a r -> radar
-    osso -> o s s o -> osso
-
-    gatto -> g a t t o -> ottag
-
-*/
-
 const userWord = prompt('Inserisci una parola:');
 console.log('userWord', userWord, typeof userWord);
 
 isPalindrome(userWord);
+isPalindrome('radar');
+isPalindrome('ciccio');
+isPalindrome('itopinonavevanonipoti');
 
 /* 
-FUNZIONI
+    FUNZIONI
 */
 function isPalindrome(word) {
     let reverseWord = '';
-    for (let i = userWord.length - 1; i >= 0; i--) {
-        console.log(userWord[i]);
+    for (let i = word.length - 1; i >= 0; i--) {
+        console.log(word[i]);
 
-        reverseWord += userWord[i];
+        reverseWord += word[i];
     }
 
     console.log('reverseWord', reverseWord, typeof reverseWord);
 
-    if (userWord === reverseWord) {
-        alert(userWord + 'è una parola palindroma');
+    if (word === reverseWord) {
+        alert(word + 'è una parola palindroma');
+
     }
     else {
-        alert(userWord + 'NON è una parola palindroma');
+        alert(word + 'NON è una parola palindroma');
     }
 }
